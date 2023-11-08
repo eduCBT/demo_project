@@ -29,3 +29,11 @@ h6,
   font-style: normal;
   font-weight: 900;
 }
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
