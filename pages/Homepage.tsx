@@ -18,13 +18,13 @@ const Homepage = () => {
 
       {/* HERO SECTION */}
       <section className="hero_sec">
-        <div className="hero_inner main_container sub_container">
+        <div className="hero_inner main_container">
           <div className="hero_left">
             <div className="hero_left_inner">
-              <div className="hero_left_header">
-                <h2>Blog Posts</h2>
+              <div className="hero_left_header header_text big">
+                <h2 className="fw_700">Blog Posts</h2>
 
-                <p>I think so, this is it. </p>
+                <p className="fw_500">I think so, this is it. </p>
               </div>
 
               <div className="hero_left_quotes small_text">
@@ -80,7 +80,13 @@ const Homepage = () => {
 
           <div className="hero_right">
             <div className="hero_right_inner">
-              <Image src={hero_img} width={500} height={500} alt="hero_img" />
+              <Image
+                src={hero_img}
+                width={500}
+                height={400}
+                alt="hero_img"
+                className="hero_right_img"
+              />
             </div>
           </div>
         </div>
