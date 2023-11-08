@@ -25,3 +25,28 @@
 ::-webkit-scrollbar-thumb:hover {
   background: $header_text;
 }
+
+/* HERO SECTION STYLES */
+
+.hero {
+  &_inner {
+    @include flex_center();
+    gap: 5rem;
+  }
+
+  &_left {
+    width: 100%;
+    max-width: 40rem;
+  }
+}
+.small_text {
+  color: #424242;
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  @media screen {
+  }
+}
