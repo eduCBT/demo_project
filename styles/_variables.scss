@@ -12,6 +12,13 @@
   flex-wrap: wrap;
 }
 
+@mixin grid_center {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+}
+
 /* CONTAINER */
 .main_container {
   padding: 0.5rem;
@@ -65,7 +72,50 @@
   font-weight: 900;
 }
 
+.header_text {
+  line-height: normal;
+
+  &.big {
+    font-size: 1.25rem;
+
+    @media screen and (min-width: 992px) {
+      font-size: 3.25rem;
+    }
+  }
+}
+
+.small_text {
+  color: #424242;
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: normal;
+
+  @media screen and (min-width: 992px) {
+    font-size: 1.125rem;
+  }
+}
+
 /* OUTLINE TEST */
 .outline_test {
   outline: 1px solid red;
+}
+
+/* ANIMATION VARIABLES */
+@keyframes animateMobile {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes animateDesktop {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(18px);
+  }
 }

@@ -25,3 +25,119 @@
 ::-webkit-scrollbar-thumb:hover {
   background: $header_text;
 }
+
+/* HERO SECTION STYLES */
+
+.hero {
+  @include flex_center();
+
+  &_inner {
+    @include flex_center();
+    // justify-content: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
+
+    @media screen and (min-width: 992px) {
+      justify-content: space-around;
+    }
+  }
+  /* LEFT */
+  &_left {
+    width: 100%;
+    max-width: 20rem;
+
+    @media screen and (min-width: 992px) {
+      max-width: 40rem;
+    }
+
+    &_inner {
+      @include grid_center();
+      gap: 2rem;
+    }
+
+    &_header {
+      h2 {
+        color: $header_text;
+      }
+
+      p {
+        color: $dark_text;
+      }
+    }
+
+    &_btn_sec {
+      @include flex_center();
+      justify-content: space-between;
+      gap: 0.5rem;
+      @media screen and (min-width: 992px) {
+        gap: 1rem;
+      }
+      button {
+        @include flex_center();
+        gap: 0.5rem;
+        width: 6rem;
+        height: 2.5rem;
+        transition: all 0.3s ease-in-out;
+        color: $white;
+        color: #fff;
+        font-size: 0.5rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        gap: 0.5rem;
+        @media screen and (min-width: 992px) {
+          gap: 1.2rem;
+          width: 12rem;
+          height: 3.2rem;
+        }
+        &:first-child {
+          background: $btn1;
+          /* TEST ANIMATION */
+          //   animation: animateMobile 5s ease-in-out infinite;
+        }
+
+        &:nth-child(2) {
+          background: $btn2;
+          /* TEST ANIMATION */
+          //   animation: animateMobile 5.4s ease-in-out infinite;
+        }
+
+        &:last-child {
+          background: $btn3;
+          /* TEST ANIMATION */
+          //   animation: animateMobile 5.8s ease-in-out infinite;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          font-weight: 600;
+          animation: none;
+        }
+        @media screen and (min-width: 992px) {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  /* RIGHT */
+  &_right {
+    display: none;
+
+    @media screen and (min-width: 576px) {
+      display: block;
+    }
+    &_inner {
+      /* TEST ANIMATION */
+      //   animation: animateDesktop 7s ease-in-out infinite;
+      width: 100%;
+    }
+
+    &_img {
+      width: 80%;
+
+      @media screen and (min-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+}
